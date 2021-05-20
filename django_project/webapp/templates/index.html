@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="container">
+        <input id="number_1" type="number" name="A">
+        <input id="number_2" type="number" name="B">
+        <button onclick="solve(event)" data-url="{% url 'add' %}" type="button">
+             Add</button>
+        <button onclick="solve(event)" data-url="{% url 'subtract' %}" type="button">
+             Subtract</button>
+        <button onclick="solve(event)" data-url="{% url 'multiply' %}" type="button">
+             Multiply</button>
+        <button onclick="solve(event)" data-url="{% url 'divide' %}" type="button">
+             Divide</button>
+        <div id="answer"></div>
+    </div>
+    <script src="{% static 'js/my_script.js' %}"></script>
+</body>
+</html>
